@@ -64,6 +64,9 @@ namespace Skill
                     hScaleMax = 1000f,
                     rect = TimeContent,
                 };
+
+                timeArea.SetTransform(Vector2.zero, new Vector2(1000f, 0f));
+
                 m_PostManipulators.Add(new NewEventMenuManipulator(state));
             }
         }

@@ -95,7 +95,8 @@ namespace Skill
                     }
                 }
                 EditorGUILayout.EndHorizontal();
-                EditorGUILayout.ObjectField(Node.transform, typeof(Transform), false);
+                using (new EditorGUI.DisabledScope(true))
+                    EditorGUILayout.ObjectField(Node.transform, typeof(Transform), false);
                 Node.isWorld = EditorGUILayout.Toggle("世界", Node.isWorld);
                 Node.localPosition = EditorGUILayout.Vector3Field("offset", Node.localPosition);
                 Node.localEulerAngles = EditorGUILayout.Vector3Field("eulur", Node.localEulerAngles);

@@ -181,6 +181,12 @@ namespace Skill
             MethodInfo oMethod = t.GetMethod("TimeToPixel", BindingFlags.Instance | BindingFlags.Public);
             return (float)oMethod.Invoke(timeArea, new Object[] { time, timeAreaRect });
         }
+
+        internal void SetTransform(Vector2 newTranslation, Vector2 newScale)
+        {
+            MethodInfo oMethod = t.GetMethod("SetTransform", BindingFlags.Instance | BindingFlags.Public);
+            oMethod.Invoke(timeArea, new Object[] { newTranslation, newScale });
+        }
     }
 
 }

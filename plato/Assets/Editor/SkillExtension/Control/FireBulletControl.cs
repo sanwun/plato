@@ -162,7 +162,8 @@ namespace Skill
                     }
                 }
                 EditorGUILayout.EndHorizontal();
-                EditorGUILayout.ObjectField(Node.transform, typeof(Transform), false);
+                using (new EditorGUI.DisabledScope(true))
+                    EditorGUILayout.ObjectField(Node.transform, typeof(Transform), false);
                 Node.offset = EditorGUILayout.Vector3Field("offset", Node.offset);
                 Node.localEulerAngles = EditorGUILayout.Vector3Field("eulur", Node.localEulerAngles);
                 Node.localScale = EditorGUILayout.Vector3Field("scale", Node.localScale);
@@ -233,7 +234,8 @@ namespace Skill
                     }
                 }
                 EditorGUILayout.EndHorizontal();
-                EditorGUILayout.ObjectField(Node.transformTarget, typeof(Transform), false);
+                using (new EditorGUI.DisabledScope(true))
+                    EditorGUILayout.ObjectField(Node.transformTarget, typeof(Transform), false);
                 
             }
             EditorGUILayout.EndFoldoutHeaderGroup();

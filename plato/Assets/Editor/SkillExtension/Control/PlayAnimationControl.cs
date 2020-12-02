@@ -81,7 +81,10 @@ namespace Skill
                     Node.triggleName = string.Empty;
                 }
                 motion = WindowState.GetAnimatorClip(Node.triggleName, Node.control);
-                EditorGUILayout.ObjectField(motion, typeof(AnimationClip), true);
+
+                using (new EditorGUI.DisabledScope(true))
+                    EditorGUILayout.ObjectField(motion, typeof(AnimationClip), true);
+
                 if (motion)
                 {
                     Node.duration = motion.length;
