@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3a0045363c2734da2ea6a964456039, type: 3}
+  m_Name: Skill100006
+  m_EditorClassIdentifier: 
+  skillOwner: {fileID: 100172, guid: d4cc05dacfe17344788b4ce8c8780211, type: 3}
+  eventNodes: []
+  animationNodes:
+  - luaConfig: '{ Event = ''PlayAnimation'',Name = ''Melee Right Attack 02'' }'
+    time: 0
+    active: 1
+    control: {fileID: 9100000, guid: d2c0b8737836ef6499e2b7085c459e86, type: 2}
+    triggleName: Melee Right Attack 02
+    duration: 2.6666667
+  playEffectNodes:
+  - luaConfig: '{Event=''PlayEffect'',Res = ''Assets/Tests/effect/effect_quad.prefab'',LifeTime
+      =0.07690427,Path = '''',Speed = 0,Offset = CS.UnityEngine.Vector3(0,0,0),Scale
+      = CS.UnityEngine.Vector3(1,1,1),Euler = CS.UnityEngine.Vector3(0,0,0),IsWorld
+      = false}'
+    time: 0.3831691
+    active: 1
+    effect: {fileID: 2593239986280698442, guid: ce1d88ed92d11ee4fb695de64ecf9e06,
+      type: 3}
+    lifeTime: 0.07690427
+    transform: {fileID: 0}
+    transformPath: 
+    transformIndex: 0
+    localPosition: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
+    localEulerAngles: {x: 0, y: 0, z: 0}
+    isWorld: 0
+  fireBulletNodes:
+  - luaConfig: '{Event=''FireBullet'',Res = ''Assets/Tests/bullet/bullet_cube.prefab'',LifeTime
+      =1.999382,Offset = CS.UnityEngine.Vector3(-0.02315226,0.869,0.7234519),Speed
+      = 30,Dir = CS.UnityEngine.Vector3(0,0,1), AlwaysAttack = 0,Path = '''',Scale
+      = CS.UnityEngine.Vector3(1,1,1),Euler = CS.UnityEngine.Vector3(0,0,0),TargetPath
+      = ''''}'
+    time: 0.45147398
+    active: 1
+    effect: {fileID: 1619072000502584056, guid: d05d3f536771bdf478ca99d5e1609228,
+      type: 3}
+    lifeTime: 1.9993815
+    speed: 30
+    dir: {x: 0, y: 0, z: 1}
+    offset: {x: -0.023152256, y: 0.869, z: 0.72345185}
+    alwaysAttack: 0
+    localScale: {x: 1, y: 1, z: 1}
+    localEulerAngles: {x: 0, y: 0, z: 0}
+    transform: {fileID: 0}
+    transformPath: 
+    transformIndex: 0
+    transformTarget: {fileID: 0}
+    transformPathTarget: 
+    transformIndexTarget: 0
+  triggerAnimationNodes:
+  - luaConfig: '{ Event = ''TriggerAnimation'',Name = ''Take Damage'',IsTrigger =
+      true }'
+    time: 0.512359
+    active: 1
+    control: {fileID: 9100000, guid: d2c0b8737836ef6499e2b7085c459e86, type: 2}
+    triggleIndex: 1
+    triggleName: Take Damage
+  triggerEventNodes:
+  - luaConfig: '{Event=''TriggerEffect'',Res = ''Assets/Tests/effect/effect_quad.prefab'',LifeTime
+      =0.4815721,IsTrigger = true}'
+    time: 0.512359
+    active: 1
+    effect: {fileID: 2593239986280698442, guid: ce1d88ed92d11ee4fb695de64ecf9e06,
+      type: 3}
+    lifeTime: 0.4815721
+  attackNodes: []
+  attackCircleNodes: []

@@ -485,6 +485,8 @@ namespace Skill
             //AssetDatabase.Refresh();
 
             SerializedObject serializedObject = new SerializedObject(modelImporter);
+            //RECORD避免第一次因版本差异序列化失败
+            AssetDatabase.Refresh();
 
             if (modelImporter.clipAnimations == null || modelImporter.clipAnimations.Length == 0)
             {
