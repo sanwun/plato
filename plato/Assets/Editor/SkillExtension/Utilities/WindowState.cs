@@ -14,7 +14,6 @@ namespace Skill
 
         public float maxTime => controls.Select(r => r.node).Max(r => r.timeEnd);
 
-        public int skillID => PrefabModel.currentSkillID;
         public GameObject player
         {
             get

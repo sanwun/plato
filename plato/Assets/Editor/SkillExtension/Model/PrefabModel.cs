@@ -73,4 +73,13 @@ public class PrefabModel
     {
         return skill.datas[id].skillname;
     }
+
+    public static string GetSkillAnimation(int id)
+    {
+        return skill.datas[id].attackaction;
+    }
+
+    public static string CurrentSkillName => GetSkillName(currentSkillID);
+
+    public static string CurrentSkillAnimation => GetSkillAnimation(currentSkillID);
 }

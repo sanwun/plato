@@ -176,7 +176,7 @@ namespace Skill
             
 
             PrefabModel.currentSkillID = int.Parse(displaySkillList[PrefabModel.currentSkillIDIndex]);
-            EditorGUILayout.LabelField(PrefabModel.GetSkillName(PrefabModel.currentSkillID));
+            EditorGUILayout.LabelField(PrefabModel.CurrentSkillName);
 
             if (isSelectChange)
             {

@@ -58,7 +58,7 @@ namespace Skill
                 var parameters = Node.control.parameters.Select(k => k.name).ToList();
                 if (parameters != null && parameters.Count != 0)
                 {
-                    var ret = parameters.Find(r => r == Table.skill.Get(state.skillID).attackaction);
+                    var ret = parameters.Find(r => r == PrefabModel.CurrentSkillAnimation);
                     if (!string.IsNullOrEmpty(ret))
                     {
                         //Node.triggleIndex = EditorGUILayout.Popup(Node.triggleIndex, parameters);
@@ -71,7 +71,7 @@ namespace Skill
                     {
                         using (new GUIColorOverride(Color.red))
                         {
-                            EditorGUILayout.LabelField($"没有找到对应动作{Table.skill.Get(state.skillID).attackaction}");
+                            EditorGUILayout.LabelField($"没有找到对应动作{PrefabModel.CurrentSkillAnimation}");
                         }
                     }
                 }
