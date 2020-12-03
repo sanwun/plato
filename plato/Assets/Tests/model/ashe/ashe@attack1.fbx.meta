@@ -597,7 +597,17 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.1470851
+        functionName: NewEvent
+        data: '{Event=''FireBullet'',Res = ''Assets/Tests/bullet/bullet_cube.prefab'',LifeTime
+          =2.002732,Offset = CS.UnityEngine.Vector3(0,1,0),Speed = 5,Dir = CS.UnityEngine.Vector3(0,0,1),
+          AlwaysAttack = 0,Path = '''',Scale = CS.UnityEngine.Vector3(1,1,1),Euler
+          = CS.UnityEngine.Vector3(0,0,0),TargetPath = ''''}'
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
